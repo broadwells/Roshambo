@@ -106,20 +106,25 @@ public class RoshamboApp {
             }
 
             //keeping score of wins/losses and ties
-            System.out.println(player1.getPlayerName() + " has won " + win1 + " matches, and lost " + loss2 + " " +
-                    "matches!");
-            if (opponent.equalsIgnoreCase("sheargenius")) {
-                System.out.println(player2.getPlayerName() + " has won " + win2 + " matches, and lost " + loss1 + " " +
-                        "matches!");
-            }
-            else if (opponent.equalsIgnoreCase("rocky")){
-                System.out.println(player3.getPlayerName() + " has won " + win2 + " matches, and lost " + loss1 + " " +
-                        "matches!");
-            }
-            System.out.println(ties + " ties!");
+            trackResults(opponent, player1, player2, player3, ties, win1, win2, loss1, loss2);
             System.out.println();
         }
 
+    }
+
+    public static void trackResults(String opponent, HumanPlayer player1, ShearGenius player2, Rocky player3,
+                                    int ties, int win1, int win2, int loss1, int loss2) {
+        System.out.println(player1.getPlayerName() + " has won " + win1 + " matches, and lost " + loss2 + " " +
+                "matches!");
+        if (opponent.equalsIgnoreCase("sheargenius")) {
+            System.out.println(player2.getPlayerName() + " has won " + win2 + " matches, and lost " + loss1 + " " +
+                    "matches!");
+        }
+        else if (opponent.equalsIgnoreCase("rocky")){
+            System.out.println(player3.getPlayerName() + " has won " + win2 + " matches, and lost " + loss1 + " " +
+                    "matches!");
+        }
+        System.out.println(ties + " ties!");
     }
 
     public static String winner(String p1Val, String p2Val){
