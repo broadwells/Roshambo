@@ -14,20 +14,20 @@ public class HumanPlayer extends Player {
 
     @Override
     public String generateRoshambo(String userChoice) {
-        String temp = "";
+        String roshamboResult = "";
         if (userChoice.equalsIgnoreCase(Roshambo.ROCK.toString())){
 
-            return Roshambo.ROCK.toString();
+           roshamboResult = Roshambo.ROCK.toString();
         }
         else if (userChoice.equalsIgnoreCase(Roshambo.PAPER.toString())){
 
-            return Roshambo.PAPER.toString();
+            roshamboResult = Roshambo.PAPER.toString();
         }
         else if (userChoice.equalsIgnoreCase(Roshambo.SCISSORS.toString())){
 
-            return Roshambo.SCISSORS.toString();
+            roshamboResult = Roshambo.SCISSORS.toString();
         }
-        return temp;
+        return roshamboResult;
     }
 
 

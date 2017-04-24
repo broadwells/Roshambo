@@ -128,23 +128,24 @@ public class RoshamboApp {
     }
 
     public static String winner(String p1Val, String p2Val){
+        String result = "";
         if (p1Val.equalsIgnoreCase("rock") && p2Val.equalsIgnoreCase("rock") ||
                 p1Val.equalsIgnoreCase("scissors") && p2Val.equalsIgnoreCase("scissors") ||
                 p1Val.equalsIgnoreCase("paper") && p2Val.equalsIgnoreCase("paper")){
-            return "draw";
+            result = "draw";
         }
         else {
             if (p1Val.equalsIgnoreCase("rock") && p2Val.equalsIgnoreCase("paper") ||
                     p1Val.equalsIgnoreCase("scissors") && p2Val.equalsIgnoreCase("rock") ||
                     p1Val.equalsIgnoreCase("paper") && p2Val.equalsIgnoreCase("scissors")){
-                return "p2";
+                result = "p2";
             }
             else if (p1Val.equalsIgnoreCase("paper") && p2Val.equalsIgnoreCase("rock") ||
                     p1Val.equalsIgnoreCase("rock") && p2Val.equalsIgnoreCase("scissors") ||
                     p1Val.equalsIgnoreCase("scissors") && p2Val.equalsIgnoreCase("paper")){
-                return "p1";
+                result = "p1";
             }
         }
-        return null;
+        return result;
     }
 }
